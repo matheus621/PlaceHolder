@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.placeholder.ui.listusers.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_listUsersFragment"
+            app:destination="@id/listUsersFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listUsersFragment"
+        android:name="com.example.placeholder.ui.listusers.ListUsersFragment"
+        android:label="Lista de Usuários"
+        tools:layout="@layout/list_users_fragment">
+        <action
+            android:id="@+id/action_listUsersFragment_to_usersFullFragment"
+            app:destination="@id/usersFullFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersFullFragment"
+        android:name="com.example.placeholder.ui.listusers.UsersFullFragment"
+        android:label="Usuário"
+        tools:layout="@layout/item_full_fragment" />
+</navigation>
